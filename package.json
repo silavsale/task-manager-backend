@@ -6,7 +6,7 @@
   "author": "silavsale <silavsale@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "run": "nodemon app.ts"
+    "start:dev": "nodemon"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
