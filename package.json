@@ -1,0 +1,20 @@
+{
+  "name": "task-manager-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/silavsale/task-manager-backend.git",
+  "author": "silavsale <silavsale@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "run": "nodemon app.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "typescript": "^4.8.4"
+  }
+}
