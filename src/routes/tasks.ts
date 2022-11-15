@@ -1,8 +1,9 @@
 import express from "express";
+import { getAllTask } from "./../controllers/tasks";
 const router = express.Router();
 
 //need to create controller for get all tasks
-// router.route("/", getAllTask);
+router.route("/").get(getAllTask);
 
 // app.get('/api/v1/tasks') - get all tasks
 // app.get('/api/v1/tasks') - get task by ID
