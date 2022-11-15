@@ -1,14 +1,18 @@
-import express from "express";
-import { getAllTask } from "./../controllers/tasks";
-const router = express.Router();
+import express from 'express'
+const router = express.Router()
+
+import { createTask, deleteTaskById, getAllTasks, getTaskById, updateTask } from '../controllers/tasks'
 
 //need to create controller for get all tasks
-router.route("/").get(getAllTask);
+// router.route("/").get(getAllTask);
+
+router.route('/').get(getAllTasks).post(createTask)
+router.route('/:id').get(getTaskById).patch(updateTask).delete(deleteTaskById)
 
 // app.get('/api/v1/tasks') - get all tasks
-// app.get('/api/v1/tasks') - get task by ID
 // app.post('/api/v1/tasks') - create new task
-// app.delete('/api/v1/tasks') - delete task by ID
-// app.patch('/api/v1/tasks') - update task by ID
+// app.get('/api/v1/tasks:id') - get task by ID
+// app.patch('/api/v1/tasks:id') - update task by ID
+// app.delete('/api/v1/tasks:id') - delete task by ID
 
-module.exports = router;
+export { router }
