@@ -3,12 +3,13 @@
     "target": "es5",
     "module": "commonjs",
     "lib": ["es6"],
-    "allowJs": true,
+    // "allowJs": true,
     "outDir": "build",
     "rootDir": "src",
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "resolveJsonModule": true
-  }
+  },
+  "exclude": ["test-fixtures", "__test__", "node_modules", "types"]
 }
