@@ -1,14 +1,12 @@
 import express from 'express'
 const app = express()
-const port = 3000
-import { connectDB } from './db/connect'
-
 import * as dotenv from 'dotenv'
+import { connectDB } from './db/connect'
 dotenv.config()
-console.log(typeof process.env.MONGO_URI, typeof '')
-const url = process.env.MONGO_URI
-
 import { router } from './routes/tasks'
+
+const port = process.env.PORT || 3000
+const url = process.env.MONGO_URI
 
 app.use(express.json())
 

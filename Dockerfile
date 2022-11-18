@@ -1,10 +1,10 @@
 FROM node:latest
 
 # Working Dir
-WORKDIR /usr/src/app 
+WORKDIR /app 
 
 # Copy Package Json
-COPY package*.json ./
+COPY package.json .
 
 # Install Prettier (For our package's build function)
 # RUN npm install prettier -g
@@ -16,7 +16,7 @@ RUN npm install nodemon -g
 RUN npm install
 
 # Copy Source Files
-COPY . .
+COPY . ./
 
 # Expose the API Port
 EXPOSE 3000
