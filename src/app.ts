@@ -10,6 +10,10 @@ const url = process.env.MONGO_URI
 
 app.use(express.json())
 
+app.get('/', (req, res) => {
+  res.send('Welcome to Task app!')
+})
+
 app.use('/api/v1/tasks', router)
 
 const start = async () => {
